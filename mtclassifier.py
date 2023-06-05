@@ -27,7 +27,7 @@ fh.setFormatter(logging.Formatter('%(levelname)s - %(asctime)s - %(message)s'))
 logger.addHandler(fh)
 
 # all arguments used as input in command line
-logger.info('The files used in command line:\nVCF: {}\tGFF: {}\tfasta: {}'.format(args.vcf, args.gff, args.fasta, '\nQuality used: {}'.format(args.quality)))
+logger.info('The files used in command line:\nVCF: {}\tGFF: {}\tfasta: {} \nQuality used: {}'.format(args.vcf, args.gff, args.fasta))
 
 # make database prefix same as gff file
 db = args.gff.replace('.gff', '.db')
@@ -212,7 +212,7 @@ for entry in vcffile:
         logger.error('Quality not a float\n')
         raise SystemExit(1)
 
-logger.info('Count of variants with quality less than 20: {}'.format(failfilter))
+logger.info('Count of variants with quality less than {}: {}'.format(args.quality,failfilter))
 
 # open tsv file then write each small list in bigger list as a separate variant
 with open('{}.tsv'.format(args.output), 'w') as out:
