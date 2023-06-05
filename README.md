@@ -9,5 +9,5 @@ Fasta for the genome
 
 Basic Syntax:
 ```
-mtclassifier.py --vcf <VCF file> --gff <GFF file> --Fasta <FASTA file> --output <Output file name> (optional -q <Quality score>)  
+mtclassifier.py --vcf <VCF file> --gff <GFF file> --Fasta <FASTA file> (optional --q <Quality score> [default 20]) --output <Output file name>  
 ```
