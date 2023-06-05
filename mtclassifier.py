@@ -27,7 +27,7 @@ fh.setFormatter(logging.Formatter('%(levelname)s - %(asctime)s - %(message)s'))
 logger.addHandler(fh)
 
 # all arguments used as input in command line
-logger.info('The files used in command line:\nVCF: {}\tGFF: {}\tfasta: {} \nQuality used: {}'.format(args.vcf, args.gff, args.fasta))
+logger.info('The files used in command line:\nVCF: {}\tGFF: {}\tfasta: {} \nQuality used: {}'.format(args.vcf, args.gff, args.fasta, args.qualtiy))
 
 # make database prefix same as gff file
 db = args.gff.replace('.gff', '.db')
